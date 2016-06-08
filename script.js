@@ -2,8 +2,7 @@
 
 $( document ).ready(function() {
     console.log( "ready!" );
-
-    if(Cookies.get('name') !== undefined){
+    if(Cookies.get('name')){
       var greeting = document.createElement("h1");
       var node = document.createTextNode("Welcome, " + Cookies.get('name'));
       greeting.appendChild(node);
@@ -14,6 +13,7 @@ $( document ).ready(function() {
 );
 
 function cookieTest(){
+
 name = document.getElementById('name').value;
 Cookies.set('name', name);
 location.reload();
