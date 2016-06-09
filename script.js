@@ -35,6 +35,9 @@ function search(){
 var test  = $.ajax({   url: "http://www.omdbapi.com/?",   data: { t: $('input[name=t]').val() },   dataType: "json",   success: function(response) {     console.log(response);
   $('#div1').html('<h1> ' + response.Title + ' </h1>');
   $('#div2').html('<img src = " ' + response.Poster + ' "/>');
+  $('#div3').html('<h1> Language: ' +
+   response.Language + "</br>" + "Rated: " + response.Rated + "</br> Genre: "  + response.Genre  + ' </h1>');
+
  } });
 
 return false;
