@@ -3,25 +3,43 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  <script src="cookies.js"></script>
-  <script src="script.js"></script>
-  <script src="animation.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script src="cookies.js"></script>
+	<script src="script.js"></script>
+	<script src="animation.js"></script>
 
 </head>
 <body>
 
-<div id="div1">
+<!--Uncomment the first form to test cookies-->
+<!--
+	<form id="userNameForm" onsubmit="return cookieTest()">
+		<label for="name"></label>
+		<input type="text" id="name" />
+		<input type="submit" />
+	</form>
 
-</div>
+	<Div onclick="animation()">Click here  for Animation Test</div>
+-->
 
-<form id="userNameForm" onsubmit="return cookieTest()">
-<label for="name"></label>
-  <input type="text" id="name" />
-  <input type="submit" />
+<form id="movieSearchForm" onsubmit="return search()">
+	<label for="movie name"></label>
+	<input type="text" name="t" onkeyup="search()" placeholder="Enter a movie name"/>
+	<input type="submit" />
 </form>
 
-<Div onclick="animation()">Click here  for Animation Test</div>
 
-</body>
-</html>
+	<div id="div1">
+
+
+	</div>
+
+	<div id="div2">
+
+
+	</div>
+
+
+
+	</body>
+	</html>
